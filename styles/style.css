@@ -5,6 +5,39 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #562EFF;
+    height: 94px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    display: block;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    margin-right: 36px;
+    display: block;
 }
 
 main {
@@ -154,3 +187,39 @@ hr {
 
 
 /* Media Queries */
+
+/* mobile device */
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 30px 5px;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+}
+
+/* tablet devices */
+@media only screen and (min-width:577px) and (max-width:768px) {
+    .container {
+        width: 100%;
+        padding: 30px 5px;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
